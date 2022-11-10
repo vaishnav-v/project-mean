@@ -1,0 +1,177 @@
+[debug] [2022-11-10T12:02:05.522Z] ----------------------------------------------------------------------
+[debug] [2022-11-10T12:02:05.527Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Lenovo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-11-10T12:02:05.528Z] CLI Version:   11.16.0
+[debug] [2022-11-10T12:02:05.529Z] Platform:      win32
+[debug] [2022-11-10T12:02:05.529Z] Node Version:  v16.17.0
+[debug] [2022-11-10T12:02:05.531Z] Time:          Thu Nov 10 2022 17:32:05 GMT+0530 (India Standard Time)
+[debug] [2022-11-10T12:02:05.531Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-10T12:02:05.793Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-10T12:02:05.794Z] > authorizing via signed-in user (vaishnav473202@gmail.com)
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2022-11-10T12:02:05.828Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-10T12:02:05.829Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-10T12:02:05.830Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-11-10T12:02:05.858Z] [hub] writing locator at C:\Users\Lenovo\AppData\Local\Temp\hub-project-10333.json
+[debug] [2022-11-10T12:02:05.925Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-10T12:02:05.926Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-11-10T12:02:05.926Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-11-10T12:02:05.999Z] defaultcredentials: writing to file C:\Users\Lenovo\AppData\Roaming\firebase\vaishnav473202_gmail_com_application_default_credentials.json
+[debug] [2022-11-10T12:02:06.008Z] Setting GAC to C:\Users\Lenovo\AppData\Roaming\firebase\vaishnav473202_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Lenovo\\AppData\\Roaming\\firebase\\vaishnav473202_gmail_com_application_default_credentials.json"}}
+[debug] [2022-11-10T12:02:06.013Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/adminSdkConfig [none]
+[debug] [2022-11-10T12:02:07.433Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/adminSdkConfig 200
+[debug] [2022-11-10T12:02:07.433Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/adminSdkConfig {"projectId":"project-10333","storageBucket":"project-10333.appspot.com","locationId":"us-central"}
+[debug] [2022-11-10T12:02:07.480Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-10333/sites 
+[debug] [2022-11-10T12:02:09.063Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-10333/sites 200
+[debug] [2022-11-10T12:02:09.063Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/project-10333/sites {"sites":[{"name":"projects/project-10333/sites/project-10333","defaultUrl":"https://project-10333.web.app","appId":"1:583798276145:web:a347b78e549d4323059510","type":"DEFAULT_SITE"}]}
+[debug] [2022-11-10T12:02:09.064Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/webApps/1:583798276145:web:a347b78e549d4323059510/config [none]
+[debug] [2022-11-10T12:02:10.700Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/webApps/1:583798276145:web:a347b78e549d4323059510/config 200
+[debug] [2022-11-10T12:02:10.700Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-10333/webApps/1:583798276145:web:a347b78e549d4323059510/config {"projectId":"project-10333","appId":"1:583798276145:web:a347b78e549d4323059510","storageBucket":"project-10333.appspot.com","locationId":"us-central","apiKey":"AIzaSyATrgqVzZmNFJ1OLlteOQcWT7mspFVBnB8","authDomain":"project-10333.firebaseapp.com","messagingSenderId":"583798276145","measurementId":"G-STPMEL8F36"}
+[debug] [2022-11-10T12:02:10.711Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/project-10333 [none]
+[debug] [2022-11-10T12:02:11.622Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/project-10333 200
+[debug] [2022-11-10T12:02:11.623Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/project-10333 {"projectId":"project-10333","projectNumber":"583798276145","displayName":"project","name":"projects/project-10333","resources":{"hostingSite":"project-10333","storageBucket":"project-10333.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_994fcaab-da45-4af3-a687-b9f660074fa1"}
+[info] i  hosting[project-10333]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[project-10333]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[info] i  ui: downloading ui-v1.11.1.zip... {"metadata":{"emulator":{"name":"ui"},"message":"downloading ui-v1.11.1.zip..."}}
+[debug] [2022-11-10T12:02:11.717Z] >>> [apiv2][query] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip 
+[debug] [2022-11-10T12:02:12.643Z] <<< [apiv2][status] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip 200
+[debug] [2022-11-10T12:02:12.643Z] <<< [apiv2][body] GET https://storage.googleapis.com/firebase-preview-drop/emulator/ui-v1.11.1.zip [stream]
+[debug] [2022-11-10T12:02:25.143Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-11-10T12:02:25.144Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-11-10T12:02:25.144Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Lenovo\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Lenovo\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-11-10T12:02:25.502Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-11-10T12:02:25.503Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "D:\project\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\project\\functions\" for Cloud Functions..."}}
+[debug] [2022-11-10T12:02:25.698Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-10T12:02:34.334Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-10T12:02:34.335Z] Building nodejs source
+[debug] [2022-11-10T12:02:34.335Z] Analyzing nodejs backend spec
+[debug] [2022-11-10T12:02:34.340Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-10T12:02:35.072Z] Serving at port 9005
+
+[debug] [2022-11-10T12:02:35.267Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-10T12:02:35.293Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] +  functions[us-central1-helloWorld]: http function initialized (http://127.0.0.1:5001/project-10333/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/project-10333/us-central1/helloWorld)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-11-10T12:09:38.067Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-11-10T12:09:38.070Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-11-10T12:09:38.071Z] Accepted request GET /project-10333/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2022-11-10T12:09:38.083Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-11-10T12:09:38.085Z] [functions] Got req.url=/project-10333/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/project-10333/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2022-11-10T12:09:38.113Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2022-11-10T12:09:38.113Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2022-11-10T12:09:42.173Z] [runtime-status] [16516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"D:\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.176Z] [runtime-status] [16516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"D:\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.177Z] [runtime-status] [16516] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-11-10T12:09:42.179Z] [runtime-status] [16516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"D:\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.318Z] [runtime-status] [16516] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-11-10T12:09:42.319Z] [runtime-status] [16516] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.24.1","resolution":"D:\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-11-10T12:09:42.321Z] [runtime-status] [16516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"D:\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.324Z] [runtime-status] [16516] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"D:\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.326Z] [runtime-status] [16516] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.24.1","resolution":"D:\\project\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.24.1\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-11-10T12:09:42.327Z] [runtime-status] [16516] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"D:\\project\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"D:\\\\project\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-11-10T12:09:42.344Z] [runtime-status] [16516] Functions runtime initialized. {"cwd":"D:\\project\\functions","node_version":"16.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Functions runtime initialized. {\"cwd\":\"D:\\\\project\\\\functions\",\"node_version\":\"16.17.0\"}"}}
+[debug] [2022-11-10T12:09:42.345Z] [runtime-status] [16516] Listening to port: \\?\pipe\fire_emu_a06a59e33c7e1243 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [16516] Listening to port: \\\\?\\pipe\\fire_emu_a06a59e33c7e1243"}}
+[debug] [2022-11-10T12:09:42.394Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: IDLE"}}
+[debug] [2022-11-10T12:09:42.395Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[debug] [2022-11-10T12:09:42.396Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: BUSY"}}
+[info] i  functions: Beginning execution of "helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"helloWorld\""}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2022-11-10T12:09:42.418Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: IDLE"}}
+[debug] [2022-11-10T12:09:42.419Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "helloWorld" in 10.6909ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"helloWorld\" in 10.6909ms"}}
+[debug] [2022-11-10T12:09:42.498Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2022-11-10T12:31:29.626Z] File D:\project\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File D:\\project\\functions\\index.js changed, reloading triggers"}}
+[debug] [2022-11-10T12:31:30.630Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-10T12:31:39.275Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-10T12:31:39.276Z] Building nodejs source
+[debug] [2022-11-10T12:31:39.276Z] Analyzing nodejs backend spec
+[debug] [2022-11-10T12:31:39.277Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-10T12:31:39.969Z] Serving at port 9005
+
+[debug] [2022-11-10T12:31:40.183Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-10T12:31:40.200Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[debug] [2022-11-10T12:31:40.240Z] [worker-pool] Shutting down IDLE worker (us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-helloWorld)"}}
+[debug] [2022-11-10T12:31:40.241Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: FINISHING {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: FINISHING"}}
+[debug] [2022-11-10T12:31:40.259Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: exited {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: exited"}}
+[debug] [2022-11-10T12:31:40.260Z] [worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: FINISHED {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-helloWorld-11114687-d667-4b71-b8bc-2eb1948d1c76]: FINISHED"}}
