@@ -1,0 +1,59 @@
+:host ::ng-deep p-panelmenu {
+    transition: all 1s;
+}
+::selection{
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+::-webkit-scrollbar{
+    width: 0;
+    color: #000;
+}
+
+
+.documentation{
+    margin-top: 48px;
+}
+.sidebar {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    margin: 0;
+}
+
+.content {
+    font-family: 'Roboto';
+    padding: 0 5em;
+    margin-left: 300px;
+}
+
+.content-header {
+    padding: 20px 0 10px 0;
+    font-size: 2rem;
+}
+
+.content-middle {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 30px;
+    overflow-wrap: break-word;
+}
+
+
+
+.content-footer{
+    background-color: aqua;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.footer .items{
+    cursor: pointer;
+    margin: 30px 10px;
+    padding: 10px 20px;
+    border: 1px solid red;
+}
+.footer .items:hover{
+    background-color: brown;
+}

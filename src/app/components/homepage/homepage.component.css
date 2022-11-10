@@ -1,0 +1,16 @@
+.homepage header {
+    background-color: rgb(153, 241, 246);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.welcome-text{
+    position: absolute;
+    top: 50vh;
+}
+header a {
+    text-decoration: none;
+    display: inline-block;
+    color: blue;
+    border: 1px solid #0505dc;
+}
