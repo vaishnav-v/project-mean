@@ -10,8 +10,8 @@
 /node_modules
 npm-debug.log
 yarn-error.log
-node/node_modules
-node/ng-src/node_modules
+node_modules
+ng-src/node_modules
 # IDEs and editors
 .idea/
 .project
