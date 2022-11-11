@@ -6,13 +6,15 @@ import { NavbarLeftComponent } from './components/navbar-left/navbar-left.compon
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { ArticleComponent } from './components/article/article.component';
 import { ArticleService } from '../shared/services/article.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
     DocumentationComponent,
     NavbarLeftComponent,
-    ArticleComponent
+    ArticleComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
