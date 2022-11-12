@@ -5,6 +5,7 @@ const routes = require("./routes")
 const cors = require('cors')
 
 const app = express()
+
 app.use(express.json())
 app.use('/api', routes)
 app.use(express.static(path.join(__dirname,"docs")))
@@ -12,10 +13,11 @@ app.use('/', express.static(path.join(__dirname,"docs")))
 app.use(cors({
     Access_Control_Allow_Origin: "*",
     origin:"*",
-    methode:['GET','POST','PATCH','DELETE','PUT'],
+    methods:['GET','POST','PATCH','DELETE','PUT'],
     allowedHeaders:'Content-Type, Authorization, Origin, X-Requested-With, Accept'
   
   })); 
+  
 app.use(function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 });
