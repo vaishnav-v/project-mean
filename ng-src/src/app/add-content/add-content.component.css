@@ -1,6 +1,40 @@
-textarea{
-    width: 70vw;
+.add-content {
+    position: absolute;
+    top: 60px;
+    width: 100%;
 }
-small{
+
+.add-article {
+    margin: 5px;
+    display: flex;
+}
+
+.add-article form , .render {
+    flex-basis: 50%;
+}
+
+.render{
+    
+}
+.render .content{
+    min-height: 70vh;
+    border: 1px solid red;
+}
+textarea {
+    width: 100%;
+}
+
+small {
     color: red;
+}
+.content-header {
+    padding: 20px 0 10px 0;
+    font-size: 4rem;
+}
+
+.content-middle {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 30px;
+    overflow-wrap: break-word;
 }

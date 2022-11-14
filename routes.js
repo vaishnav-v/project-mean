@@ -1,6 +1,5 @@
 var express = require('express')
 const articleCollection = require('./db')
-const path = require('path')
 
 const router = express.Router()
 

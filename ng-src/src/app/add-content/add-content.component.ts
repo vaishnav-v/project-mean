@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { string } from 'joi';
 import { Article } from '../shared/article';
 import { ArticleService } from '../shared/services/article.service';
 
@@ -11,6 +12,8 @@ import { ArticleService } from '../shared/services/article.service';
 export class AddContentComponent implements OnInit {
   addArticleForm!: FormGroup;
   article!: Article;
+  renderHeading = ""
+  renderContent = ""
   constructor
     (
       private fb: FormBuilder,
@@ -35,7 +38,9 @@ export class AddContentComponent implements OnInit {
     return this.addArticleForm.get('content')
   }
   onSubmit(){
-     this.addArticle()
+     //this.addArticle()
+     this.renderHeading = (this.addArticleForm.value.articleName)
+     this.renderContent = (this.addArticleForm.value.content)
   }
 
   addArticle() {

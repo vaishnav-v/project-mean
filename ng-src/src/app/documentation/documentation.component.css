@@ -60,36 +60,7 @@
 
 /* footer */
 
-a,
-a:hover,
-a:focus,
-a:active {
-  text-decoration: none;
-  outline: none;
-}
 
-a,
-a:active,
-a:focus {
-  color: #333;
-  text-decoration: none;
-  transition-timing-function: ease-in-out;
-  -ms-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -webkit-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
-  -ms-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 img {
   max-width: 100%;
   height: auto;
