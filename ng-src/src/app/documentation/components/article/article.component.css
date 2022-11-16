@@ -1,0 +1,12 @@
+:host ::ng-deep .article h1{
+    margin: 10px 0;
+}
+:host ::ng-deep .article h2{
+    margin: 10px 0;
+}
+:host ::ng-deep .article h3{
+    margin: 10px 0;
+}
+:host ::ng-deep .article p{
+   
+}

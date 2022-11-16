@@ -22,10 +22,16 @@
 }
 
 .content {
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     padding: 0 5em;
     margin-left: 300px;
+    font-family: 'League Spartan Variable';
 }
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');
+    font-weight: 200 900;
+  }
 
 .content-header {
     padding: 20px 0 10px 0;
@@ -34,11 +40,13 @@
 
 .content-middle, p {
     font-weight: 300;
-    font-size: 19px;
-    line-height: 30px !important;
-    overflow-wrap: break-word;
+    font-size: 25px;
+    line-height: 35px !important;
+    overflow-wrap: break-word
 }
-
+::ng-deep ul{
+    list-style-position: inside;
+}
 
 
 .content-footer{
