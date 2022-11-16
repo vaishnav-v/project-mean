@@ -30,8 +30,9 @@ export class MenuModel {
             ]
         },
         {
-            label: 'File',
-            icon: 'pi pi-fw pi-file'
+            label: 'HTML',
+            icon: 'pi pi-fw pi-file',
+            routerLink: ['./HTML']
         },
         {
             label: 'File',

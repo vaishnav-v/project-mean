@@ -1,9 +1,10 @@
 var express = require('express')
+const articlesCollection = require('./db')
 const articleCollection = require('./db')
 
 const router = express.Router()
 
-router.get('/',(req,res)=>{
+router.get('/', (req, res) => {
     res.status(202).send("welcome")
 })
 
@@ -58,13 +59,43 @@ router.post('/new/article', (req, res) => {
 
     article['uploadDate'] = uploadDate
     console.log(article);
-    articleCollection.create(article)
+    articleCollection.findOne({ articleName: article.articleName }, function (err, data) {
+        if (!data) {
+            console.log("create");
+            articleCollection.create(article, function (err, data) {
+                if (err) {
+                    res.json({'message':'Failed'})
+                    console.log("error");
+                }
+                else{
+                    res.json({'message':'FIle Created'})
+                }
+            })
+        }
+        else {
+            console.log(data);
+            articleCollection.updateMany({ articleName: article.articleName }, article,
+                function (err, data) {
+                    if (err) {
+                        res.json({'message':'Error'})
+                    }
+                    else {
+                        res.json({'message':'Update Success'})
+                        console.log("update Successful");
+                    }
+                }
+            )
+
+        }
+    })
+
+    /* (article)
         .then((data) => {
             res.json(data)
         })
         .catch((err) => {
             console.log(err);
-        })
+        }) */
 })
 
 router.post('/getID', (req, res) => {

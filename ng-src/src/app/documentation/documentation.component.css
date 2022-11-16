@@ -32,10 +32,10 @@
     font-size: 2rem;
 }
 
-.content-middle {
+.content-middle, p {
     font-weight: 300;
     font-size: 19px;
-    line-height: 30px;
+    line-height: 30px !important;
     overflow-wrap: break-word;
 }
 

@@ -38,7 +38,7 @@ export class AddContentComponent implements OnInit {
     return this.addArticleForm.get('content')
   }
   onSubmit(){
-     //this.addArticle()
+     this.addArticle()
      this.renderHeading = (this.addArticleForm.value.articleName)
      this.renderContent = (this.addArticleForm.value.content)
   }
@@ -47,7 +47,7 @@ export class AddContentComponent implements OnInit {
     this.article = this.addArticleForm.value
     this.articleService.createArticle(this.article).subscribe((data) => {
       console.log(data);
-      alert(data)
+      alert(JSON.stringify(data))
     })
   }
 

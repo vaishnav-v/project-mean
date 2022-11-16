@@ -11,7 +11,7 @@ import { ArticleService } from 'src/app/shared/services/article.service';
 export class ArticleComponent implements OnInit {
   articleTitle: string = "start";
   articleID: string = ''
-  article: Article | undefined
+  article: Article = new Article
   constructor(
     private activatedRoute: ActivatedRoute,
     private articleService: ArticleService,
@@ -20,11 +20,12 @@ export class ArticleComponent implements OnInit {
       console.log(params);
       this.articleTitle = params['id'];
       console.log(this.articleTitle);
+      this.readID()
     })
   }
 
   ngOnInit(): void {
-    this.readID()
+    
   }
    async readID() {
      await this.articleService.getID(this.articleTitle).subscribe(async (data) => {

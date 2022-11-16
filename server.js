@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(express.json())
+app.use(express.json({limit: '50mb'}));
 app.use('/api', routes)
 app.use(express.static(path.join(__dirname,"docs")))
 app.use('/', express.static(path.join(__dirname,"docs")))
@@ -22,7 +22,7 @@ app.use(function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 });
 
-PORT = process.env.PORT || 8080
+PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log("started on", PORT);
     console.log(__dirname+'./docs');
