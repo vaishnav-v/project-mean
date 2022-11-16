@@ -40,6 +40,10 @@ export class ArticleComponent implements OnInit {
       console.log(this.article);  
     })
   }
+  scrollTop(){
+    var currentScroll = document.documentElement.scrollTop
+    window.scrollTo(0,currentScroll/2)
+  }
   
 }
 

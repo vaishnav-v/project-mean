@@ -25,10 +25,12 @@ a:focus {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .row{
     display: flex;
-    margin: 0 30px;
+   /*  margin: 0 30px; */
 }
 .footer {
     background: linear-gradient(105deg, #6e99e6, #093c94);

@@ -34,16 +34,18 @@
 }
 
 .topnav input[type=text] {
+    margin: 8px;
+    width: auto;
     float: right;
     padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
+/*     margin-top: 8px;
+    margin-right: 16px; */
     border: none;
     font-size: 17px;
 }
 .search{
     display: inline-block;
-    margin: 7px;
+    margin: 8px 0;
 }
 ::ng-deep .p-button.p-button-icon-only.p-button-rounded{
     width: 2rem;

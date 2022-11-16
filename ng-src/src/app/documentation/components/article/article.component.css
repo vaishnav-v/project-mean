@@ -8,5 +8,14 @@
     margin: 10px 0;
 }
 :host ::ng-deep .article p{
-   
+   line-height: 2rem;
+}
+:host ::ng-deep .content-header {
+    padding-top: 20px;
+    font-size: 2rem;
+}
+:host ::ng-deep .content-header h2{
+    font-family: "OpenSans";
+    font-weight: 700;
+    margin: 0;
 }

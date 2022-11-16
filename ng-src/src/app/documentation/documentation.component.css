@@ -12,11 +12,11 @@
 
 
 .documentation{
-    margin-top: 48px;
+    margin-top: 53px;
 }
 .sidebar {
     position: fixed;
-    top: 48px;
+    top: 53px;
     left: 0;
     margin: 0;
 }
@@ -33,20 +33,15 @@
     font-weight: 200 900;
   }
 
-.content-header {
-    padding: 20px 0 10px 0;
-    font-size: 2rem;
-}
-
 .content-middle, p {
     font-weight: 300;
     font-size: 25px;
     line-height: 35px !important;
     overflow-wrap: break-word
 }
-::ng-deep ul{
+/* ::ng-deep ul{
     list-style-position: inside;
-}
+} */
 
 
 .content-footer{
