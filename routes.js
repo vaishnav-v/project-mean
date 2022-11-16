@@ -1,5 +1,4 @@
 var express = require('express')
-const articlesCollection = require('./db')
 const articleCollection = require('./db')
 
 const router = express.Router()
@@ -24,7 +23,7 @@ router.get('/articles', async (req, res) => {
                      visibility: article.visibility,  */
                 }
             ))
-            console.log(results);
+            // console.log(results)
             res.send(results)
         })
         .catch(
