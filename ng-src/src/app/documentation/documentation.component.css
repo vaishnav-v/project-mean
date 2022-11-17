@@ -1,7 +1,7 @@
 :host ::ng-deep p-panelmenu {
     transition: all 1s;
 }
-::selection{
+:host ::ng-deep ::selection{
     color: rgb(255, 255, 255);
     background-color: black;
 }
