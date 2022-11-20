@@ -1,7 +1,8 @@
 .add-content {
     position: absolute;
-    top: 60px;
-    width: 100%;
+    top: 52px;
+    height: calc(100vh - 52px );
+    width: 100vw;
 }
 
 .add-article {
@@ -11,14 +12,16 @@
 
 .add-article form , .render {
     flex-basis: 50%;
+    flex-shrink: 0;
 }
 
 .render{
     
 }
 .render .content{
-    min-height: 70vh;
-    border: 1px solid red;
+    min-height: 80vh;
+    overflow: scroll;
+    margin: 5px;
 }
 textarea {
     width: 100%;
@@ -37,4 +40,7 @@ small {
     font-size: 19px;
     line-height: 30px;
     overflow-wrap: break-word;
+}
+.submit button{
+    margin: 20px 10px;
 }

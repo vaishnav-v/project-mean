@@ -1,5 +1,10 @@
 var express = require('express')
 const articleCollection = require('./db')
+var md = require('markdown-it')({
+    html: true,
+    breaks: true,
+    linkify: true
+})
 
 const router = express.Router()
 
@@ -51,9 +56,9 @@ router.post('/new/article', (req, res) => {
     const article = req.body
 
     var date = new Date();
-    var uploadDate =
-        date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " "
-        + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+    var uploadDate = new Date().toDateString()
+    /*  date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " "
+     + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() */
     console.log(uploadDate)
 
     article['uploadDate'] = uploadDate
@@ -61,13 +66,16 @@ router.post('/new/article', (req, res) => {
     articleCollection.findOne({ articleName: article.articleName }, function (err, data) {
         if (!data) {
             console.log("create");
+            var htmlConverted = md.render(article.content)
+            article.content = htmlConverted
             articleCollection.create(article, function (err, data) {
                 if (err) {
-                    res.json({'message':'Failed'})
+                    res.json({ 'message': 'Failed' })
                     console.log("error");
                 }
-                else{
-                    res.json({'message':'FIle Created'})
+                else {
+                    res.json({ 'message': 'FIle Created' })
+                    console.log(article);
                 }
             })
         }
@@ -76,10 +84,10 @@ router.post('/new/article', (req, res) => {
             articleCollection.updateMany({ articleName: article.articleName }, article,
                 function (err, data) {
                     if (err) {
-                        res.json({'message':'Error'})
+                        res.json({ 'message': 'Error' })
                     }
                     else {
-                        res.json({'message':'Update Success'})
+                        res.json({ 'message': 'Update Success' })
                         console.log("update Successful");
                     }
                 }
@@ -112,5 +120,15 @@ router.post('/getID', (req, res) => {
         })
 })
 
+router.post('/convert', (req, res) => {
+    try {
+        mdFile = req.body.markdown
+        var htmlConverted = md.render(mdFile)
+        res.send(htmlConverted)
+    } catch (error) {
+        res.send(error)
+    }
+
+})
 
 module.exports = router

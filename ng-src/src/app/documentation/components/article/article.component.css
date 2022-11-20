@@ -8,7 +8,7 @@
     margin: 10px 0;
 }
 :host ::ng-deep .article p{
-   line-height: 2rem;
+   line-height: 2.2rem;
 }
 :host ::ng-deep .content-header {
     padding-top: 20px;

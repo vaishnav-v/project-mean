@@ -44,6 +44,10 @@ export class ArticleComponent implements OnInit {
     var currentScroll = document.documentElement.scrollTop
     window.scrollTo(0,currentScroll/2)
   }
+  copyText(){
+    navigator.clipboard.writeText(this.article.content);
+    alert("text copied")
+  }
   
 }
 

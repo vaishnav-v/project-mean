@@ -27,6 +27,15 @@
     margin-left: 300px;
     font-family: 'League Spartan Variable';
 }
+@media screen and (max-width: 400px) {
+    .content{
+        margin-left: 0;
+    }
+    :host ::ng-deep p-panelmenu{
+        display: none;
+    }
+}
+
 @font-face {
     font-family: 'League Spartan Variable';
     src: url('/assets/fonts/LeagueSpartan-Light.woff') format('woff');

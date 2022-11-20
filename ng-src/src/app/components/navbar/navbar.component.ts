@@ -10,6 +10,11 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+    this.nav()
 
+  }
+  nav() {
+    var navInput = document.querySelector(".search-container input")
+    console.log(navInput?.classList.toggle('active'));
+  }
 }
