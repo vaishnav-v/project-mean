@@ -1,0 +1,46 @@
+.add-content {
+    position: absolute;
+    top: 52px;
+    height: calc(100vh - 52px );
+    width: 100vw;
+}
+
+.add-article {
+    margin: 5px;
+    display: flex;
+}
+
+.add-article form , .render {
+    flex-basis: 50%;
+    flex-shrink: 0;
+}
+
+.render{
+    
+}
+.render .content{
+    min-height: 80vh;
+    overflow: scroll;
+    margin: 5px;
+}
+textarea {
+    width: 100%;
+}
+
+small {
+    color: red;
+}
+.content-header {
+    padding: 20px 0 10px 0;
+    font-size: 4rem;
+}
+
+.content-middle {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 30px;
+    overflow-wrap: break-word;
+}
+.submit button{
+    margin: 20px 10px;
+}

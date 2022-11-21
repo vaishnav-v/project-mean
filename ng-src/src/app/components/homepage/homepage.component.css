@@ -1,0 +1,59 @@
+.homepage header.main {
+    background: radial-gradient(circle, rgba(144, 226, 242, 1) 74%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50vh;
+    text-align: center;
+}
+
+header.main a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+header.main a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "copy";
+    margin: 1px solid black;
+    margin: 10px;
+}
+
+.learn .heading {
+    text-align: center;
+    font-size: 35px;
+    margin: 3rem;
+    font-weight: 700;
+}
+
+.learn .content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.learn .content p-card {
+    margin: 30px;
+}
+
+.career header {
+    background-color: #d7fff4;
+    text-align: center;
+}
+
+.career .main {
+    padding-top: 50px;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.career .sub {
+    padding: 30px;
+    font-size: 2em;
+}

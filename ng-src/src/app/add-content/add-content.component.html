@@ -1,0 +1,49 @@
+<div class="add-content">
+    <div class="add-article">
+        <form [formGroup]="addArticleForm" (ngSubmit)="showDialog()">
+
+            <label>Article Title</label><br>
+            <input type="text" id="articleTitle" formControlName="articleName" pInputText required>
+            <div *ngIf="articleTitle?.invalid && (articleTitle?.touched || articleTitle?.dirty)">
+                <small *ngIf="articleTitle?.errors?.['required']">
+                    Title Is Required
+                </small>
+            </div><br>
+            <label>Content</label><br>
+            <textarea formControlName="content" pInputTextarea required >
+
+            </textarea>
+            <div *ngIf="content?.invalid && (content?.touched || content?.dirty)">
+                <small *ngIf="content?.errors?.['required']">
+                    Content Is Required
+                </small>
+            </div>
+            <div class="submit">
+                <button pButton type="button" pRipple label="Preview" class="p-button-sm"
+                    (click)="onPreview()"></button>
+                <button pButton type="submit" pRipple label="Submit" class="p-button-sm  p-button-danger"></button>
+            </div>
+
+        </form>
+
+        <div class="render">
+            <div class="content p-card">
+                <div class="content-header" [innerHTML]="renderHeading">
+
+                </div>
+                <div class="content-middle" [innerHTML]="renderContent">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <p-dialog [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}"
+        position="top"
+        [header]=renderHeading>
+        <p>{{renderContent}}</p>
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="onSubmit()" label="Yes" styleClass="p-button-text"></p-button>
+            <p-button icon="pi pi-times" (click)="display=false" label="No"></p-button>
+        </ng-template>
+    </p-dialog>
+</div>
