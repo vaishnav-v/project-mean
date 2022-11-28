@@ -1,0 +1,19 @@
+<div class="outline">
+
+    <div class="form">
+        <a class="close" [routerLink]="['/']"><i class="pi pi-times"></i></a>
+        <div class="heading">Sign up</div>
+        <form action="" method="post">
+            <span class="p-float-label">
+                <input id="float-input" type="text" pInputText>
+                <label for="float-input">Username</label>
+            </span>
+            <span class="p-float-label">
+                <input id="float-input" type="password" pInputText >
+                <label for="float-input">Password</label>
+            </span>
+            <div class="login"><a  [routerLink]="['/login']">Already have an account...</a></div>
+            <button pButton type="button" label="Sign up" class="p-button-raised p-button-rounded"></button>
+        </form>
+    </div>
+</div>

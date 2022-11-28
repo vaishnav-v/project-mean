@@ -30,6 +30,7 @@ ul {
 }
 .row{
     display: flex;
+    flex-wrap: wrap;
    /*  margin: 0 30px; */
 }
 .footer {

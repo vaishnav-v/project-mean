@@ -27,12 +27,16 @@
     margin-left: 300px;
     font-family: 'League Spartan Variable';
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
     .content{
         margin-left: 0;
+        padding: 0 ;
     }
     :host ::ng-deep p-panelmenu{
         display: none;
+    }
+    .content-middle{
+        padding: 0 10px;
     }
 }
 
@@ -44,7 +48,7 @@
 
 .content-middle, p {
     font-weight: 300;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 35px !important;
     overflow-wrap: break-word
 }
@@ -101,4 +105,7 @@ section {
 }
 .row.copyright{
     margin: 15px 0;
+}
+:host ::ng-deep ul,:host ::ng-deep ol{
+    margin-left: 1em;
 }

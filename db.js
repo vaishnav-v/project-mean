@@ -29,6 +29,22 @@ const articleSchema = new mongoose.Schema({
     }
 
 })
+const loginSchema = new mongoose.Schema({
+    email: {
+        type: 'string',
+        required: true
+    },
+    password: {
+        type: 'string',
+        required: true
+    },
+    role: {
+        type: 'string',
+    }
+})
 
 const articlesCollection = mongoose.model('details', articleSchema) //collection and schema
-module.exports = articlesCollection
+const loginCollection = mongoose.model('login', loginSchema)
+
+module.exports.articlesCollection = articlesCollection
+module.exports.loginCollection = loginCollection

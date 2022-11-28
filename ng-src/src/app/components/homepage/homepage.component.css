@@ -16,14 +16,6 @@ header.main a {
     display: inline-block;
 }
 
-header.main a::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: "copy";
-    margin: 1px solid black;
-    margin: 10px;
-}
 
 .learn .heading {
     text-align: center;
@@ -51,9 +43,11 @@ header.main a::after {
     padding-top: 50px;
     font-size: 3em;
     font-weight: 600;
+    line-height: 1em;
 }
 
 .career .sub {
     padding: 30px;
     font-size: 2em;
+    line-height: 1em;
 }

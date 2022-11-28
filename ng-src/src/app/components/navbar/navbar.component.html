@@ -1,18 +1,29 @@
 <div class="navbar">
-    <div class="topnav">
-        <a class="active" href="../">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a [routerLink]="['/add/content']">add</a>
-        <div class="search-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <div class="search">
-              <button pButton type="button" class="p-button-raised p-button-sm p-button-rounded 
-             " icon="pi pi-search" ></button>
-            </div>
-            
-          </form>
+  <p-sidebar [(visible)]="display">
+    <p-panelMenu 
+    [model]="items" [style]="{'width':'300px','height':'100vh','overflow-y':'scroll'}"></p-panelMenu>
+  </p-sidebar>
+  <div class="topnav">
+    
+    <a class="menu-toggle"(click)="display=true"><i class="pi pi-bars"></i></a>
+    <a class="active" href="../">Home</a>
+    <a [routerLink]="['/about_us']">About</a>
+    <a >Contact</a>
+    <a [routerLink]="['/add/content']">add</a>
+    
+    <div class="search-container">
+      <a [routerLink]="['/signup']">Sign Up</a>
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <div class="search">
+          <button pButton type="button" class="p-button-raised p-button-sm p-button-rounded 
+             " icon="pi pi-search" (click)="nav()"></button>
         </div>
-      </div>
+
+      </form>
+    </div>
+  </div>
 </div>
+
+
+

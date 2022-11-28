@@ -15,7 +15,7 @@ export class AddContentComponent implements OnInit {
   renderHeading = ""
   renderContent = ""
   display: boolean = false;
-  query400:MediaQueryList = window.matchMedia("(max-width: 400px)")
+  query400: MediaQueryList = window.matchMedia("(max-width: 400px)")
 
   constructor
     (
@@ -33,7 +33,7 @@ export class AddContentComponent implements OnInit {
         content: ['', [Validators.required]]
       }
     )
-    
+
   }
   get articleTitle() {
     return this.addArticleForm.get('articleName')
@@ -43,14 +43,14 @@ export class AddContentComponent implements OnInit {
   }
   onSubmit() {
     this.addArticle()
-    this.display = false; 
+    this.display = false;
   }
-  isActive(query:MediaQueryList){
-    if(query.matches) {
+  isActive(query: MediaQueryList) {
+    if (query.matches) {
       console.log("matches")
     }
   }
-  
+
 
   onPreview() {
     this.renderHeading = (this.addArticleForm.value.articleName)
@@ -64,8 +64,8 @@ export class AddContentComponent implements OnInit {
     })
   }
 
-  
- showDialog() {
+
+  showDialog() {
     this.onPreview()
     this.display = true;
   }

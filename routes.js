@@ -1,19 +1,34 @@
 var express = require('express')
-const articleCollection = require('./db')
+var hljs = require('highlight.js')
+const session = require('express-session')
+
+const { articlesCollection } = require('./db')
+const { loginCollection } = require('./db')
+
 var md = require('markdown-it')({
     html: true,
     breaks: true,
-    linkify: true
+    linkify: true,
+    highlight: function (str, lang) {
+        if (lang && hljs.getLanguage(lang)) {
+            try {
+                return hljs.highlight(str, { language: lang }).value;
+            } catch (__) { }
+        }
+        return ''; // use external default escaping
+    }
 })
 
 const router = express.Router()
+
+router.session = session
 
 router.get('/', (req, res) => {
     res.status(202).send("welcome")
 })
 
 router.get('/articles', async (req, res) => {
-    await articleCollection.find()
+    await articlesCollection.find()
         .then((articles) => {
             var results = articles.map((article) => (
                 {
@@ -40,7 +55,7 @@ router.get('/articles', async (req, res) => {
 router.get('/articles/:id', async (req, res) => {
     const articleId = req.params.id
     console.log(articleId)
-    articleCollection.findById(articleId, (err, data) => {
+    articlesCollection.findById(articleId, (err, data) => {
         if (err) {
             res.status(504).send(err)
         }
@@ -62,13 +77,14 @@ router.post('/new/article', (req, res) => {
     console.log(uploadDate)
 
     article['uploadDate'] = uploadDate
-    console.log(article);
-    articleCollection.findOne({ articleName: article.articleName }, function (err, data) {
+    var htmlConverted = md.render(article.content)
+    article.content = htmlConverted
+    //console.log(article);
+    articlesCollection.findOne({ articleName: article.articleName }, function (err, data) {
         if (!data) {
             console.log("create");
-            var htmlConverted = md.render(article.content)
-            article.content = htmlConverted
-            articleCollection.create(article, function (err, data) {
+
+            articlesCollection.create(article, function (err, data) {
                 if (err) {
                     res.json({ 'message': 'Failed' })
                     console.log("error");
@@ -111,7 +127,7 @@ router.post('/getID', (req, res) => {
     {
         articleName: articleName
     }
-    articleCollection.findOne(query)
+    articlesCollection.findOne(query)
         .then((article) => {
             res.send(article._id)
         })
@@ -128,7 +144,33 @@ router.post('/convert', (req, res) => {
     } catch (error) {
         res.send(error)
     }
-
 })
+
+router.post('/login', (req, res) => {
+    const query = req.body
+    loginCollection.findOne(query)
+        .then((data) => {
+            if(data)res.json({"msg":"success"})
+            else{res.status(401).json({"msg":"failed"})}
+        })
+        .catch((error) => {
+            res.status(504).send(error)
+        })
+})
+
+router.post('/signup', (req, res) => {
+    const query = req.body
+    req.session.role = 'admin'
+
+    loginCollection.create(query)
+        .then(() => {
+            res.json({"msg":"success"})
+            res.cookie = {'role': req.session.role}
+        })
+        .catch((error) => {
+            res.status(504).send(error)
+        })
+})
+
 
 module.exports = router

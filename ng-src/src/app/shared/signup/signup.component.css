@@ -1,0 +1,65 @@
+.outline {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #a8e5ff;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    background-color: white;
+    width: 25%;
+    padding: 0 2em;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.form .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.form .close .pi {
+    margin: 10px;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0;
+    font-family: 'OpenSans Regular';
+}
+
+.form span {
+    text-align: center;
+}
+
+.form form input {
+    box-shadow: none;
+    width: 100%;
+}
+
+.form form button {
+    margin: 1em;
+}
+
+.p-float-label {
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .form {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 90%;
+    }
+}

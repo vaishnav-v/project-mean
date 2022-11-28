@@ -6,6 +6,8 @@
     top: 0;
     left: 0;
     width: 100vw;
+    height: 50px;
+    z-index: 10;
 }
 
 .topnav a {
@@ -16,6 +18,9 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+.topnav a.menu-toggle{
+    display: none;
 }
 
 .topnav a:hover {
@@ -29,8 +34,20 @@
 }
 
 .topnav .search-container {
-    float: right;
+    /* float: right; */
     margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 0;
+   /*  width: 100%; */
+}
+.search-container form{
+    display: flex;
+    justify-content: flex-end;
+}
+.search-container form input {
+    flex-grow: 1;
+    display: none;
 }
 
 .topnav input[type=text] {
@@ -45,20 +62,26 @@
 }
 .search{
     display: inline-block;
-    margin: 8px 0;
+    margin: 8px;
 }
 ::ng-deep .p-button.p-button-icon-only.p-button-rounded{
     width: 2rem;
     height: 2rem;
 }
 .active{
-    display: inline !important;
+    display: inline ;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 768px){
     .search-container input{
         display: none;
         position: absolute;
         top: 0;
         left: 0;
+    }
+    .topnav a,.topnav a.active{
+        display: none ;
+    }
+    .topnav a.menu-toggle{
+        display: inline;
     }
 }

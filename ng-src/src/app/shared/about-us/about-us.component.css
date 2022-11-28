@@ -1,0 +1,28 @@
+.cover{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #d0e5fc;
+}
+.about{
+    text-align: center;
+
+}
+.contr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contr div{
+    font-size: 2em;
+    padding: 20px;
+}
+.heading{
+    
+}
+.heading .main{
+    font-size: 3em;
+    padding: 20px;
+    display: inline-block;
+}
